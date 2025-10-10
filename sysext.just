@@ -505,7 +505,9 @@ install-rpms:
     echo "📦 Extracting packages:"
     for rpm in ../rpms/*.rpm; do
         echo "$(basename ${rpm})"
-        rpm2cpio "${rpm}" | ${SUDO} cpio -idmv &> /dev/null
+        rpm2cpio "${rpm}" > ${rpm}.tar
+        ${SUDO} cpio -idmv &> /dev/null < ${rpm}.tar
+        rm ${rpm}.tar
     done
 
 # Install files from the current directory. Uses:
