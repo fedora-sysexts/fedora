@@ -267,7 +267,8 @@ download-rpms target arch=arch:
     fi
     if [[ -n "{{external_repos}}" ]]; then
         pre_commands+="dnf install -y dnf5-plugins"
-        for r in "{{external_repos}}"; do
+        external_repos="$(echo "{{external_repos}}" | xargs)"
+        for r in ${external_repos}; do
             pre_commands+=" ; dnf config-manager addrepo --from-repofile=${r}"
         done
         pre_commands+=" ; "
