@@ -267,7 +267,8 @@ download-rpms target arch=arch:
     fi
     if [[ -n "{{external_repos}}" ]]; then
         pre_commands+="dnf install -y dnf5-plugins"
-        for r in "{{external_repos}}"; do
+        external_repos="$(echo "{{external_repos}}" | xargs)"
+        for r in ${external_repos}; do
             pre_commands+=" ; dnf config-manager addrepo --from-repofile=${r}"
         done
         pre_commands+=" ; "
@@ -505,7 +506,9 @@ install-rpms:
     echo "📦 Extracting packages:"
     for rpm in ../rpms/*.rpm; do
         echo "$(basename ${rpm})"
-        rpm2cpio "${rpm}" | ${SUDO} cpio -idmv &> /dev/null
+        rpm2cpio "${rpm}" > ${rpm}.tar
+        ${SUDO} cpio -idmv &> /dev/null < ${rpm}.tar
+        rm ${rpm}.tar
     done
 
 # Install files from the current directory. Uses:
