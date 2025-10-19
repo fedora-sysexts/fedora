@@ -1,7 +1,0 @@
-FROM baseimage
-
-RUN <<EORUN
-set -xeuo pipefail
-dnf install -y wireguard-tools
-dnf clean all
-EORUN

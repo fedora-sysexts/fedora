@@ -266,12 +266,6 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: openssl"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'openssl'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: qutebrowser"
         uses: ./.github/actions/build
         with:
@@ -318,12 +312,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'vim'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: wireguard-tools"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'wireguard-tools'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: zoxide"
@@ -569,12 +557,6 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: openssl"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'openssl'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: qutebrowser"
         uses: ./.github/actions/build
         with:
@@ -621,12 +603,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'vim'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: wireguard-tools"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'wireguard-tools'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: zoxide"
@@ -872,12 +848,6 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: openssl"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'openssl'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: ripgrep"
         uses: ./.github/actions/build
         with:
@@ -918,12 +888,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'vim'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: wireguard-tools"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'wireguard-tools'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: zoxide"
@@ -1565,12 +1529,6 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: openssl"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'openssl'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: ripgrep"
         uses: ./.github/actions/build
         with:
@@ -1611,12 +1569,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'vim'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: wireguard-tools"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'wireguard-tools'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: zoxide"
@@ -1862,12 +1814,6 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: openssl"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'openssl'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: ripgrep"
         uses: ./.github/actions/build
         with:
@@ -1908,12 +1854,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'vim'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: wireguard-tools"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'wireguard-tools'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: zoxide"
@@ -2159,12 +2099,6 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: openssl"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'openssl'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: ripgrep"
         uses: ./.github/actions/build
         with:
@@ -2205,12 +2139,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'vim'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: wireguard-tools"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'wireguard-tools'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: zoxide"
