@@ -314,12 +314,6 @@ jobs:
           sysext: 'vim'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: wireguard-tools"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'wireguard-tools'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: zoxide"
         uses: ./.github/actions/build
         with:
@@ -611,12 +605,6 @@ jobs:
           sysext: 'vim'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: wireguard-tools"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'wireguard-tools'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: zoxide"
         uses: ./.github/actions/build
         with:
@@ -900,12 +888,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'vim'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: wireguard-tools"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'wireguard-tools'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: zoxide"
@@ -1589,12 +1571,6 @@ jobs:
           sysext: 'vim'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: wireguard-tools"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'wireguard-tools'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: zoxide"
         uses: ./.github/actions/build
         with:
@@ -1880,12 +1856,6 @@ jobs:
           sysext: 'vim'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: wireguard-tools"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'wireguard-tools'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: zoxide"
         uses: ./.github/actions/build
         with:
@@ -2169,12 +2139,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'vim'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: wireguard-tools"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'wireguard-tools'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: zoxide"
