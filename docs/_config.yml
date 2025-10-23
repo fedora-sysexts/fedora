@@ -47,3 +47,5 @@ compress_html:
   startings: []
   blanklines: false
   profile: false
+
+color_scheme: dark
