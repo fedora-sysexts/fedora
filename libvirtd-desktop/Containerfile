@@ -24,3 +24,7 @@ dnf install -y \
     virt-install
 dnf clean all
 EORUN
+
+COPY files/usr/lib/tmpfiles.d/libvirt.conf /usr/lib/tmpfiles.d/libvirt.conf
+
+COPY files/etc/systemd/system/virtlogd.service.d/override.conf /etc/systemd/system/virtlogd.service.d/override.conf
