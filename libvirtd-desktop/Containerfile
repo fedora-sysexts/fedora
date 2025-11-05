@@ -27,4 +27,4 @@ EORUN
 
 COPY files/usr/lib/tmpfiles.d/libvirt.conf /usr/lib/tmpfiles.d/libvirt.conf
 
-COPY files/etc/systemd/system/virtlogd.service.d/override.conf /etc/systemd/system/virtlogd.service.d/override.conf
+COPY files/usr/lib/systemd/system/virtlogd.service.d/override.conf /usr/lib/systemd/system/virtlogd.service.d/override.conf
