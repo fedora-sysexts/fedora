@@ -39,6 +39,7 @@ virtstoraged-ro.socket
 virtstoraged.socket
 "
 version_package := "libvirt-client"
+files := "usr"
 base_images := "
 quay.io/fedora-ostree-desktops/base-atomic:41 x86_64,aarch64
 quay.io/fedora-ostree-desktops/base-atomic:42 x86_64,aarch64
