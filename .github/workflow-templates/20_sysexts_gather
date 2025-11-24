@@ -31,7 +31,7 @@
     if: ${{ always() && (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: "Mark directory as safe"
         run: |
