@@ -5,7 +5,6 @@ wireshark
 "
 version_package := "wireshark"
 base_images := "
-quay.io/fedora-ostree-desktops/kinoite:41 x86_64,aarch64
 quay.io/fedora-ostree-desktops/kinoite:42 x86_64,aarch64
 quay.io/fedora-ostree-desktops/kinoite:43 x86_64,aarch64
 "
