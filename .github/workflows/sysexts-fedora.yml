@@ -5,7 +5,6 @@ name: "Build sysexts for Fedora"
 
 env:
   GH_TOKEN: ${{ github.token }}
-  RELEASEURL: "https://github.com/${{ github.repository }}/releases/download"
 
 on:
   pull_request:
@@ -17,12 +16,6 @@ on:
   schedule:
     - cron:  '0 0 * * *'
   workflow_dispatch:
-    inputs:
-      force-rebuild:
-        description: 'Force rebuild of all sysexts'
-        required: true
-        default: false
-        type: boolean
 
 # Needed to allow creating a release
 permissions:
