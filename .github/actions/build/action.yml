@@ -11,10 +11,6 @@ inputs:
     description: "The image to use as a base for the sysext"
     required: true
 
-# This composite action needs the following environment variables to be set at
-# the workflow or job level:
-# - RELEASEURL: Mandatory, needed to fetch older releases
-
 runs:
   using: "composite"
   steps:
@@ -23,6 +19,7 @@ runs:
         SYSEXT: ${{ inputs.sysext }}
         IMAGE: ${{ inputs.image }}
         PR: ${{ github.event_name == 'pull_request' }}
+        RELEASEURL: "https://github.com/${{ github.repository }}/releases/download"
       shell: bash
       run: |
         set -euxo pipefail

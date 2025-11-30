@@ -4,16 +4,13 @@
 name: "Gather versions for sysexts"
 description: "Publish a release that references all available versions for each sysext"
 
-# This composite action needs the following environment variables to be set at
-# the workflow or job level:
-# - RELEASEURL: Mandatory, needed to fetch older releases
-
 runs:
   using: "composite"
   steps:
     - name: "Publish release"
       env:
         GH_TOKEN: ${{ github.token }}
+        RELEASEURL: "https://github.com/${{ github.repository }}/releases/download"
       if: (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
       shell: bash
       run: |

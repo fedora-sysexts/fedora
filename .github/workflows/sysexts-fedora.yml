@@ -5,7 +5,6 @@ name: "Build sysexts for Fedora"
 
 env:
   GH_TOKEN: ${{ github.token }}
-  RELEASEURL: "https://github.com/${{ github.repository }}/releases/download"
 
 on:
   pull_request:
