@@ -14,7 +14,6 @@ inputs:
 # This composite action needs the following environment variables to be set at
 # the workflow or job level:
 # - RELEASEURL: Mandatory, needed to fetch older releases
-# - FORCE_REBUILD: Optional, used to force sysext's rebuild (and publication)
 
 runs:
   using: "composite"
