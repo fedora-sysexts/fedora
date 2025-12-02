@@ -230,6 +230,12 @@ jobs:
           sysext: 'krb5-workstation'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: libgda"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'libgda'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: libratbag"
         uses: ./.github/actions/build
         with:
@@ -513,6 +519,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'krb5-workstation'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: libgda"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'libgda'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libratbag"
@@ -1142,6 +1154,12 @@ jobs:
           sysext: 'krb5-workstation'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: libgda"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'libgda'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: libratbag"
         uses: ./.github/actions/build
         with:
@@ -1425,6 +1443,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'krb5-workstation'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: libgda"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'libgda'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libratbag"
