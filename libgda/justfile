@@ -1,0 +1,9 @@
+name := "libgda"
+packages := "
+libgda
+libgda-sqlite
+"
+
+import '../sysext.just'
+
+all: default
