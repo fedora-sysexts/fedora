@@ -24,6 +24,8 @@ path = [
   "*/justfile",
   "iwd/usr/lib/NetworkManager/conf.d/wifi_backend.conf",
   "qemu-guest-agent/usr/lib/systemd/system/qemu-guest-agent.service.d/override.conf",
+  "libvirtd/usr/lib/tmpfiles.d/libvirt.conf",
+  "libvirtd/usr/lib/systemd/system/virtlogd.service.d/override.conf",
   "libvirtd-desktop/usr/lib/tmpfiles.d/libvirt.conf",
   "libvirtd-desktop/usr/lib/systemd/system/virtlogd.service.d/override.conf",
 ]
