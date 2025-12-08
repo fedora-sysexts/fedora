@@ -1,0 +1,8 @@
+FROM baseimage
+
+RUN <<EORUN
+set -xeuo pipefail
+dnf install -y \
+  libgda libgda-sqlite
+dnf clean all
+EORUN

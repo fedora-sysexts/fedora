@@ -1,7 +1,7 @@
-name := "btop"
+name := "libgda"
 packages := "
-btop
-rocm-smi
+libgda
+libgda-sqlite
 "
 
 import '../sysext.just'

@@ -47,7 +47,7 @@ jobs:
           sudo rm /var/lib/containers -rf
 
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: "Mark directory as safe"
         run: |

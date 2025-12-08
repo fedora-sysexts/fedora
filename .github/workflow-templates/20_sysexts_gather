@@ -5,20 +5,14 @@
       options: "--privileged --security-opt label=disable --user 0:0"
     # Run after the builds and versionned release
     needs:
-      - build-fedora-41-x86_64
-      - build-fedora-41-aarch64
       - build-fedora-42-x86_64
       - build-fedora-42-aarch64
       - build-fedora-43-x86_64
       - build-fedora-43-aarch64
-      - build-fedora-silverblue-41-x86_64
-      - build-fedora-silverblue-41-aarch64
       - build-fedora-silverblue-42-x86_64
       - build-fedora-silverblue-42-aarch64
       - build-fedora-silverblue-43-x86_64
       - build-fedora-silverblue-43-aarch64
-      - build-fedora-kinoite-41-x86_64
-      - build-fedora-kinoite-41-aarch64
       - build-fedora-kinoite-42-x86_64
       - build-fedora-kinoite-42-aarch64
       - build-fedora-kinoite-43-x86_64
@@ -31,7 +25,7 @@
     if: ${{ always() && (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: "Mark directory as safe"
         run: |

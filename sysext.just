@@ -7,8 +7,12 @@
 set allow-duplicate-variables := true
 set allow-duplicate-recipes := true
 
-# sysexts must explicitely say which base operating system images they target
-base_images := ""
+# Default to base-atomic images for x86_64 & aarch64 for the current branched,
+# stable and old stable Fedora releases. Can be override on a per sysext basis.
+base_images := "
+quay.io/fedora-ostree-desktops/base-atomic:42 x86_64,aarch64
+quay.io/fedora-ostree-desktops/base-atomic:43 x86_64,aarch64
+"
 
 # Default to building for the current architecture
 arch := arch()
