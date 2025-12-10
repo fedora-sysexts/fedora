@@ -1,0 +1,10 @@
+name := "incus"
+packages := "
+incus
+incus-client
+"
+version_package := "incus-client"
+
+import '../sysext.just'
+
+all: default
