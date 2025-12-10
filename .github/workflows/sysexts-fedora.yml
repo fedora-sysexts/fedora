@@ -188,6 +188,12 @@ jobs:
           sysext: 'igt-gpu-tools'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: incus"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'incus'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: inxi"
         uses: ./.github/actions/build
         with:
@@ -477,6 +483,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'igt-gpu-tools'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: incus"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'incus'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: inxi"
@@ -1112,6 +1124,12 @@ jobs:
           sysext: 'igt-gpu-tools'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: incus"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'incus'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: inxi"
         uses: ./.github/actions/build
         with:
@@ -1401,6 +1419,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'igt-gpu-tools'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: incus"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'incus'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: inxi"
