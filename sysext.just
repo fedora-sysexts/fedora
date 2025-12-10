@@ -691,6 +691,9 @@ reset-selinux-labels target arch=arch:
     # module in the sysext and might thus need specific labels
     pre_commands=""
     if [[ -d "./rootfs/usr/share/selinux/packages" ]]; then
+        # Always disable the openh264 repo by default
+        pre_commands="dnf5 config-manager setopt fedora-cisco-openh264.enabled=0; "
+
         dnf_opts=""
         if [[ "{{dnf_weak_deps}}" == false ]]; then
             dnf_opts="--setopt=install_weak_deps=False"
