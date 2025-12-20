@@ -278,6 +278,12 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: niri-base-atomic"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'niri-base-atomic'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: ripgrep"
         uses: ./.github/actions/build
         with:
@@ -575,6 +581,12 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: niri-base-atomic"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'niri-base-atomic'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: ripgrep"
         uses: ./.github/actions/build
         with:
@@ -650,6 +662,12 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git fetch --no-tags --prune --depth=1 origin +refs/heads/main:refs/remotes/origin/main
 
+      - name: "Build sysext: niri-silverblue"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'niri-silverblue'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: wireshark-silverblue"
         uses: ./.github/actions/build
         with:
@@ -676,6 +694,12 @@ jobs:
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git fetch --no-tags --prune --depth=1 origin +refs/heads/main:refs/remotes/origin/main
+
+      - name: "Build sysext: niri-silverblue"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'niri-silverblue'
+          image: ${{ env.IMAGE }}
 
       - name: "Build sysext: wireshark-silverblue"
         uses: ./.github/actions/build
@@ -1214,6 +1238,12 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: niri-base-atomic"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'niri-base-atomic'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: ripgrep"
         uses: ./.github/actions/build
         with:
@@ -1511,6 +1541,12 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: niri-base-atomic"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'niri-base-atomic'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: ripgrep"
         uses: ./.github/actions/build
         with:
@@ -1586,6 +1622,12 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git fetch --no-tags --prune --depth=1 origin +refs/heads/main:refs/remotes/origin/main
 
+      - name: "Build sysext: niri-silverblue"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'niri-silverblue'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: wireshark-silverblue"
         uses: ./.github/actions/build
         with:
@@ -1612,6 +1654,12 @@ jobs:
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git fetch --no-tags --prune --depth=1 origin +refs/heads/main:refs/remotes/origin/main
+
+      - name: "Build sysext: niri-silverblue"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'niri-silverblue'
+          image: ${{ env.IMAGE }}
 
       - name: "Build sysext: wireshark-silverblue"
         uses: ./.github/actions/build
