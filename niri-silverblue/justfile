@@ -1,0 +1,9 @@
+name := "niri"
+packages := "niri"
+base_images := "
+quay.io/fedora-ostree-desktops/silverblue:42 x86_64,aarch64
+quay.io/fedora-ostree-desktops/silverblue:43 x86_64,aarch64
+"
+import '../sysext.just'
+
+all: default
