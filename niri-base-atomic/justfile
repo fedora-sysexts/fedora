@@ -1,0 +1,5 @@
+name := "niri"
+packages := "niri"
+import '../sysext.just'
+
+all: default
