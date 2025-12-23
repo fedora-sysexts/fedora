@@ -2,7 +2,6 @@ FROM baseimage
 
 RUN <<EORUN
 set -xeuo pipefail
-dnf copr enable ismaelpuerto/python-adblock
-dnf install -y qutebrowser python3-adblock
+dnf install -y qutebrowser
 dnf clean all
 EORUN

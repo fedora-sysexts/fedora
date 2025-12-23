@@ -581,6 +581,12 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: qutebrowser"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'qutebrowser'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: ripgrep"
         uses: ./.github/actions/build
         with:
@@ -1220,6 +1226,12 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: qutebrowser"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'qutebrowser'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: ripgrep"
         uses: ./.github/actions/build
         with:
@@ -1515,6 +1527,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'neovim'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: qutebrowser"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'qutebrowser'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: ripgrep"
