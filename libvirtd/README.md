@@ -34,6 +34,13 @@ See the [Virtual Machine Manager Flatpak](https://flathub.org/apps/org.virt_mana
       }
   });
   ```
+- Set the correct permissions and SELinux contexts:
+```
+sudo chown -R qemu:qemu /var/lib/libvirt/qemu
+sudo restorecon -Rv /var/lib/libvirt
+sudo chown root:root /var/log/libvirt/qemu
+sudo restorecon -Rv /var/log/libvirt
+```
 - Restart libvirtd (via virtqemud, virtnetworkd & virtstoraged):
   ```
   $ sudo systemctl restart virtqemud.socket virtnetworkd.socket virtstoraged.socket
