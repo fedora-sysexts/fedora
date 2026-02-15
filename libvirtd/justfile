@@ -79,5 +79,12 @@ install-manual:
         ${SUDO} rmdir sbin
     fi
 
+    # Make libiscsi libs visible by the linker
+    # libisci add a config drop-in to the linker under /etc
+    # See https://src.fedoraproject.org/rpms/libiscsi/blob/rawhide/f/libiscsi.spec#_39
+    # Ideally the linker would source configs from /usr as well
+    ${SUDO} mkdir -p ./usr/lib/ld.so.conf.d/
+    ${SUDO} mv ./etc/ld.so.conf.d/* ./usr/lib/ld.so.conf.d
+
     # Empty out /var & /boot
     ${SUDO} rm -rf ./var ./boot
