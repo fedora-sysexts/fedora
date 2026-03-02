@@ -278,6 +278,12 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: powertop"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'powertop'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: qutebrowser"
         uses: ./.github/actions/build
         with:
@@ -579,6 +585,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'neovim'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: powertop"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'powertop'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: qutebrowser"
@@ -1238,6 +1250,12 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: powertop"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'powertop'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: qutebrowser"
         uses: ./.github/actions/build
         with:
@@ -1539,6 +1557,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'neovim'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: powertop"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'powertop'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: qutebrowser"

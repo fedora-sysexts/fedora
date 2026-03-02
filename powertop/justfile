@@ -1,0 +1,6 @@
+name := "powertop"
+packages := "powertop"
+
+import '../sysext.just'
+
+all: default
