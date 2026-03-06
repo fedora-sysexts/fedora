@@ -1,0 +1,7 @@
+FROM baseimage
+
+RUN <<EORUN
+set -xeuo pipefail
+dnf install -y host-spawn
+dnf clean all
+EORUN

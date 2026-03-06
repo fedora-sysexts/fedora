@@ -1,0 +1,6 @@
+name := "host-spawn"
+packages := "host-spawn"
+
+import '../sysext.just'
+
+all: default

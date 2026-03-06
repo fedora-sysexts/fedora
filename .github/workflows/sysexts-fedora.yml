@@ -176,6 +176,12 @@ jobs:
           sysext: 'helix'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: host-spawn"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'host-spawn'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: htop"
         uses: ./.github/actions/build
         with:
@@ -483,6 +489,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'helix'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: host-spawn"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'host-spawn'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: htop"
@@ -1148,6 +1160,12 @@ jobs:
           sysext: 'helix'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: host-spawn"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'host-spawn'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: htop"
         uses: ./.github/actions/build
         with:
@@ -1455,6 +1473,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'helix'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: host-spawn"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'host-spawn'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: htop"
