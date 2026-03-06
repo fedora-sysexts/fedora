@@ -30,7 +30,7 @@ runs:
                 | jq --arg SYSEXT "${sysext}" --raw-output '
                   map(
                     select(
-                      (.tagName | startswith($SYSEXT))
+                      (.tagName | test("^" + $SYSEXT + "-[0-9]"))
                       and
                       (.tagName != $SYSEXT)
                     )
