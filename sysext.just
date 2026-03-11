@@ -12,6 +12,7 @@ set allow-duplicate-recipes := true
 base_images := "
 quay.io/fedora-ostree-desktops/base-atomic:42 x86_64,aarch64
 quay.io/fedora-ostree-desktops/base-atomic:43 x86_64,aarch64
+quay.io/fedora-ostree-desktops/base-atomic:44 x86_64,aarch64
 "
 
 # Default to building for the current architecture

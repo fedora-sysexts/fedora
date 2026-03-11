@@ -37,10 +37,13 @@ main() {
     images=(
         'quay.io/fedora-ostree-desktops/base-atomic:42'
         'quay.io/fedora-ostree-desktops/base-atomic:43'
+        'quay.io/fedora-ostree-desktops/base-atomic:44'
         'quay.io/fedora-ostree-desktops/silverblue:42'
         'quay.io/fedora-ostree-desktops/silverblue:43'
+        'quay.io/fedora-ostree-desktops/silverblue:44'
         'quay.io/fedora-ostree-desktops/kinoite:42'
         'quay.io/fedora-ostree-desktops/kinoite:43'
+        'quay.io/fedora-ostree-desktops/kinoite:44'
         'quay.io/fedora/fedora-coreos:stable'
         'quay.io/fedora/fedora-coreos:next'
     )
@@ -49,10 +52,13 @@ main() {
     declare -A jobnames
     jobnames["quay.io/fedora-ostree-desktops/base-atomic:42"]="fedora-42"
     jobnames["quay.io/fedora-ostree-desktops/base-atomic:43"]="fedora-43"
+    jobnames["quay.io/fedora-ostree-desktops/base-atomic:44"]="fedora-44"
     jobnames["quay.io/fedora-ostree-desktops/silverblue:42"]="fedora-silverblue-42"
     jobnames["quay.io/fedora-ostree-desktops/silverblue:43"]="fedora-silverblue-43"
+    jobnames["quay.io/fedora-ostree-desktops/silverblue:44"]="fedora-silverblue-44"
     jobnames["quay.io/fedora-ostree-desktops/kinoite:42"]="fedora-kinoite-42"
     jobnames["quay.io/fedora-ostree-desktops/kinoite:43"]="fedora-kinoite-43"
+    jobnames["quay.io/fedora-ostree-desktops/kinoite:44"]="fedora-kinoite-44"
     jobnames["quay.io/fedora/fedora-coreos:stable"]="fedora-coreos-stable"
     jobnames["quay.io/fedora/fedora-coreos:next"]="fedora-coreos-next"
 
