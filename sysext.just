@@ -303,7 +303,7 @@ download-rpms target arch=arch:
         --volume "${PWD}/../../.dnf-cache:/var/cache/libdnf5" \
         --workdir "/var/srv" \
         "{{target}}" \
-        bash -xc "export FORCE_COLUMNS=100 && ${pre_commands}dnf download --resolve ${dnf_arch} ${dnf_opts} ${disablerepos} ${enablerepos} ${packages}"
+        bash -xc "${pre_commands}dnf download --resolve ${dnf_arch} ${dnf_opts} ${disablerepos} ${enablerepos} ${packages}"
 
 # Manual download step, that can be overridden to dowload non RPM content
 download-manual arch=arch:
@@ -719,7 +719,7 @@ reset-selinux-labels target arch=arch:
         fi
 
         if [[ -n "{{packages}}" ]]; then
-            pre_commands+="export FORCE_COLUMNS=100 && dnf install -y ${dnf_opts} ${disablerepos} ./rpms/* && "
+            pre_commands+="dnf install -y ${dnf_opts} ${disablerepos} ./rpms/* && "
         fi
 
         mkdir -p ../.dnf-cache
