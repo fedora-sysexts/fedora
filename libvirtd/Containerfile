@@ -32,3 +32,5 @@ dnf install -y \
     virt-install
 dnf clean all
 EORUN
+
+COPY usr /
