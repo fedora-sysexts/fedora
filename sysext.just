@@ -73,7 +73,7 @@ debug := env('JUST_DEBUG', '')
 podman_extra_opts := env('JUST_PODMAN_EXTRA_OPTS', '')
 
 # Default podman options
-podman_opts := "--rm --arch=" + arch + " --security-opt label=disable" + podman_extra_opts
+podman_opts := "--rm --arch=" + arch + " --security-opt label=disable --env LC_ALL=en_US.UTF-8" + podman_extra_opts
 
 # Default, empty, just recipe
 default:
