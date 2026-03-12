@@ -12,6 +12,7 @@ set allow-duplicate-recipes := true
 base_images := "
 quay.io/fedora-ostree-desktops/base-atomic:42 x86_64,aarch64
 quay.io/fedora-ostree-desktops/base-atomic:43 x86_64,aarch64
+quay.io/fedora-ostree-desktops/base-atomic:44 x86_64,aarch64
 "
 
 # Default to building for the current architecture
@@ -72,7 +73,7 @@ debug := env('JUST_DEBUG', '')
 podman_extra_opts := env('JUST_PODMAN_EXTRA_OPTS', '')
 
 # Default podman options
-podman_opts := "--rm --arch=" + arch + " --security-opt label=disable" + podman_extra_opts
+podman_opts := "--rm --arch=" + arch + " --security-opt label=disable --env LC_ALL=en_US.UTF-8" + podman_extra_opts
 
 # Default, empty, just recipe
 default:
@@ -303,7 +304,7 @@ download-rpms target arch=arch:
         --volume "${PWD}/../../.dnf-cache:/var/cache/libdnf5" \
         --workdir "/var/srv" \
         "{{target}}" \
-        bash -xc "export FORCE_COLUMNS=100 && ${pre_commands}dnf download --resolve ${dnf_arch} ${dnf_opts} ${disablerepos} ${enablerepos} ${packages}"
+        bash -xc "${pre_commands}dnf download --resolve ${dnf_arch} ${dnf_opts} ${disablerepos} ${enablerepos} ${packages}"
 
 # Manual download step, that can be overridden to dowload non RPM content
 download-manual arch=arch:
@@ -719,7 +720,7 @@ reset-selinux-labels target arch=arch:
         fi
 
         if [[ -n "{{packages}}" ]]; then
-            pre_commands+="export FORCE_COLUMNS=100 && dnf install -y ${dnf_opts} ${disablerepos} ./rpms/* && "
+            pre_commands+="dnf install -y ${dnf_opts} ${disablerepos} ./rpms/* && "
         fi
 
         mkdir -p ../.dnf-cache
