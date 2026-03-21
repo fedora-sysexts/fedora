@@ -41,9 +41,10 @@ sudo restorecon -Rv /var/lib/libvirt
 sudo chown root:root /var/log/libvirt/qemu
 sudo restorecon -Rv /var/log/libvirt
 ```
-- Trigger the systemd tmpfile drop-in:
+- Trigger the systemd tmpfile drop-in and refresh the linker cache:
 ```
   $ sudo systemd-tmpfiles --create
+  $ ldconfig
 ```
 
 - Restart libvirtd (via virtqemud, virtnetworkd & virtstoraged):

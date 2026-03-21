@@ -34,6 +34,11 @@ See the [Virtual Machine Manager Flatpak](https://flathub.org/apps/org.virt_mana
       }
   });
   ```
+- Trigger the systemd tmpfile drop-in and refresh the linker cache:
+```
+  $ sudo systemd-tmpfiles --create
+  $ ldconfig
+  ```
 - Restart libvirtd (via virtqemud, virtnetworkd & virtstoraged):
   ```
   $ sudo systemctl restart virtqemud.socket virtnetworkd.socket virtstoraged.socket
