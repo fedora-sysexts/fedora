@@ -1,0 +1,9 @@
+name := "node-exporter"
+packages := "node-exporter"
+upholds := "
+prometheus-node-exporter.service
+"
+
+import '../sysext.just'
+
+all: default

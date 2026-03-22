@@ -278,6 +278,12 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: node-exporter"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'node-exporter'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: powertop"
         uses: ./.github/actions/build
         with:
@@ -587,6 +593,12 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: node-exporter"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'node-exporter'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: powertop"
         uses: ./.github/actions/build
         with:
@@ -882,6 +894,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'neovim'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: node-exporter"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'node-exporter'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: powertop"
@@ -1607,6 +1625,12 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: node-exporter"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'node-exporter'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: powertop"
         uses: ./.github/actions/build
         with:
@@ -1916,6 +1940,12 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: node-exporter"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'node-exporter'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: powertop"
         uses: ./.github/actions/build
         with:
@@ -2211,6 +2241,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'neovim'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: node-exporter"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'node-exporter'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: powertop"
