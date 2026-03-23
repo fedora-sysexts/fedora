@@ -41,12 +41,12 @@ sudo restorecon -Rv /var/lib/libvirt
 sudo chown root:root /var/log/libvirt/qemu
 sudo restorecon -Rv /var/log/libvirt
 ```
-- Make sure to source `/usr/lib/ld.so.conf.d` configs:
+- Trigger the systemd tmpfile drop-in and refresh the linker cache:
 ```
-$ sudo cat <<EOF > /etc/ld.so.conf.d/sysext-usr.conf 
-include /usr/lib/ld.so.conf.d/*.conf
-EOF
+  $ sudo systemd-tmpfiles --create
+  $ ldconfig
 ```
+
 - Restart libvirtd (via virtqemud, virtnetworkd & virtstoraged):
   ```
   $ sudo systemctl restart virtqemud.socket virtnetworkd.socket virtstoraged.socket

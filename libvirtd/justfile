@@ -27,6 +27,7 @@ qemu-kvm
 swtpm
 virt-install
 "
+files := "usr"
 upholds := "
 virtlockd-admin.socket
 virtlockd.socket
