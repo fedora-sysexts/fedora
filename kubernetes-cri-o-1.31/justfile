@@ -22,7 +22,6 @@ files := "usr"
 cleanup_files := "/usr/libexec/kubernetes/kubelet-plugins/volume/exec/.keep"
 base_images := "
 quay.io/fedora/fedora-coreos:stable x86_64,aarch64
-quay.io/fedora/fedora-coreos:next x86_64,aarch64
 "
 
 import '../sysext.just'
