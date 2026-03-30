@@ -28,6 +28,8 @@ path = [
   "libvirtd-desktop/usr/lib/tmpfiles.d/ld.so.conf",
   "libvirtd/usr/lib/sysusers.d/libvirtdbus-group.conf",
   "libvirtd-desktop/usr/lib/sysusers.d/libvirtdbus-group.conf",
+  "libvirtd/usr/lib/systemd/system/virtstoraged.service.d/after-ldreload.conf",
+  "libvirtd-desktop/usr/lib/systemd/system/virtstoraged.service.d/after-ldreload.conf",
 ]
 SPDX-FileCopyrightText = [
     "Fedora sysexts contributors"
