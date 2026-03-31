@@ -25,6 +25,7 @@ virt-install
 "
 files := "usr"
 upholds := "
+libvirt-dbus.service
 virtlockd-admin.socket
 virtlockd.socket
 virtlogd-admin.socket
@@ -32,6 +33,7 @@ virtlogd.socket
 virtnetworkd-admin.socket
 virtnetworkd-ro.socket
 virtnetworkd.socket
+virtnodedevd.socket
 virtqemud-admin.socket
 virtqemud-ro.socket
 virtqemud.socket

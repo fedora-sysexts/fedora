@@ -26,6 +26,8 @@ path = [
   "qemu-guest-agent/usr/lib/systemd/system/qemu-guest-agent.service.d/override.conf",
   "libvirtd/usr/lib/tmpfiles.d/ld.so.conf",
   "libvirtd-desktop/usr/lib/tmpfiles.d/ld.so.conf",
+  "libvirtd/usr/lib/sysusers.d/libvirtdbus-group.conf",
+  "libvirtd-desktop/usr/lib/sysusers.d/libvirtdbus-group.conf",
 ]
 SPDX-FileCopyrightText = [
     "Fedora sysexts contributors"
