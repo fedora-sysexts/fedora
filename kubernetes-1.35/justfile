@@ -1,7 +1,6 @@
-kube_version := "1.32"
-name := "kubernetes-cri-o-" + kube_version
+kube_version := "1.35"
+name := "kubernetes-" + kube_version
 packages := "
-cri-o"      + kube_version + "
 cri-tools"  + kube_version + "
 kubernetes" + kube_version + "
 kubernetes" + kube_version + "-client
@@ -12,7 +11,6 @@ cri-o
 cri-tools
 "
 upholds := "
-crio.service
 kubelet.service
 "
 version_package := "kubernetes" + kube_version

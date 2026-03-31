@@ -1,4 +1,4 @@
-# kubernetes-1.32
+# kubernetes-1.35
 
 Kubernetes packages and direct dependencies only. Needs to be combined with a
 container runtime such as `containerd`, either from Fedora's packages or the

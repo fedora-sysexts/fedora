@@ -1175,18 +1175,6 @@ jobs:
           sysext: 'google-guest-agent'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: kubernetes-1.31"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'kubernetes-1.31'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: kubernetes-1.32"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'kubernetes-1.32'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: kubernetes-1.33"
         uses: ./.github/actions/build
         with:
@@ -1199,16 +1187,10 @@ jobs:
           sysext: 'kubernetes-1.34'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: kubernetes-cri-o-1.31"
+      - name: "Build sysext: kubernetes-1.35"
         uses: ./.github/actions/build
         with:
-          sysext: 'kubernetes-cri-o-1.31'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: kubernetes-cri-o-1.32"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'kubernetes-cri-o-1.32'
+          sysext: 'kubernetes-1.35'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: kubernetes-cri-o-1.33"
@@ -1221,6 +1203,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'kubernetes-cri-o-1.34'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: kubernetes-cri-o-1.35"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'kubernetes-cri-o-1.35'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libvirtd"
@@ -1292,12 +1280,6 @@ jobs:
           sysext: 'google-guest-agent'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: kubernetes-1.32"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'kubernetes-1.32'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: kubernetes-1.33"
         uses: ./.github/actions/build
         with:
@@ -1310,10 +1292,10 @@ jobs:
           sysext: 'kubernetes-1.34'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: kubernetes-cri-o-1.32"
+      - name: "Build sysext: kubernetes-1.35"
         uses: ./.github/actions/build
         with:
-          sysext: 'kubernetes-cri-o-1.32'
+          sysext: 'kubernetes-1.35'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: kubernetes-cri-o-1.33"
@@ -1326,6 +1308,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'kubernetes-cri-o-1.34'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: kubernetes-cri-o-1.35"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'kubernetes-cri-o-1.35'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libvirtd"
@@ -2492,18 +2480,6 @@ jobs:
           sysext: 'google-guest-agent'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: kubernetes-1.31"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'kubernetes-1.31'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: kubernetes-1.32"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'kubernetes-1.32'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: kubernetes-1.33"
         uses: ./.github/actions/build
         with:
@@ -2516,16 +2492,10 @@ jobs:
           sysext: 'kubernetes-1.34'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: kubernetes-cri-o-1.31"
+      - name: "Build sysext: kubernetes-1.35"
         uses: ./.github/actions/build
         with:
-          sysext: 'kubernetes-cri-o-1.31'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: kubernetes-cri-o-1.32"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'kubernetes-cri-o-1.32'
+          sysext: 'kubernetes-1.35'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: kubernetes-cri-o-1.33"
@@ -2538,6 +2508,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'kubernetes-cri-o-1.34'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: kubernetes-cri-o-1.35"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'kubernetes-cri-o-1.35'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libvirtd"
@@ -2609,12 +2585,6 @@ jobs:
           sysext: 'google-guest-agent'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: kubernetes-1.32"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'kubernetes-1.32'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: kubernetes-1.33"
         uses: ./.github/actions/build
         with:
@@ -2627,10 +2597,10 @@ jobs:
           sysext: 'kubernetes-1.34'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: kubernetes-cri-o-1.32"
+      - name: "Build sysext: kubernetes-1.35"
         uses: ./.github/actions/build
         with:
-          sysext: 'kubernetes-cri-o-1.32'
+          sysext: 'kubernetes-1.35'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: kubernetes-cri-o-1.33"
@@ -2643,6 +2613,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'kubernetes-cri-o-1.34'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: kubernetes-cri-o-1.35"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'kubernetes-cri-o-1.35'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libvirtd"

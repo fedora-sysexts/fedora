@@ -1,6 +1,6 @@
 FROM baseimage
 
-ARG VERSION=1.32
+ARG VERSION=1.35
 
 RUN <<EORUN
 set -xeuo pipefail
