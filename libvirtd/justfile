@@ -22,6 +22,7 @@ libvirt-daemon-driver-storage-rbd
 libvirt-daemon-driver-storage-scsi
 libvirt-dbus
 netcat
+python3-virt-firmware
 qemu-img
 qemu-kvm
 swtpm

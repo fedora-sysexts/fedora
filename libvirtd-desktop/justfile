@@ -18,6 +18,7 @@ libvirt-dbus
 osinfo-db
 osinfo-db-tools
 netcat
+python3-virt-firmware
 qemu-kvm
 qemu-img
 swtpm
