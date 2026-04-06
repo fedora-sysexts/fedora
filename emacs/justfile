@@ -1,7 +1,11 @@
 name := "emacs"
 packages := "
 emacs
+emacs-pgtk
 libvterm
+"
+exclude_packages := "
+emacs-gtk+x11
 "
 dnf_weak_deps := "false"
 
