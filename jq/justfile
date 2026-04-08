@@ -1,0 +1,6 @@
+name := "jq"
+packages := "jq"
+
+import '../sysext.just'
+
+all: default
