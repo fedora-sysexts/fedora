@@ -9,8 +9,8 @@ See the [%%SYSEXT%% versions](%%RELEASEURL%%/%%SYSEXT%%).
 Run those commands if you have not yet installed any sysext on your system:
 
 ```
-sudo install -d -m 0755 -o 0 -g 0 /var/lib/extensions /var/lib/extensions.d
-sudo restorecon -RFv /var/lib/extensions /var/lib/extensions.d
+sudo install -d -m 0755 -o 0 -g 0 "/var/lib/extensions" "/var/lib/extensions.d"
+sudo restorecon -RFv "/var/lib/extensions" "/var/lib/extensions.d"
 sudo systemctl enable --now systemd-sysext.service
 ```
 </details>
@@ -23,8 +23,8 @@ Define a helper function:
 install_sysext() {
   SYSEXT="${1}"
   URL="%%EXTENSIONSURL%%"
-  sudo install -d -m 0755 -o 0 -g 0 /etc/sysupdate.${SYSEXT}.d
-  sudo restorecon -RFv /etc/sysupdate.${SYSEXT}.d
+  sudo install -d -m 0755 -o 0 -g 0 "/etc/sysupdate.${SYSEXT}.d"
+  sudo restorecon -RFv "/etc/sysupdate.${SYSEXT}.d"
   curl --silent --fail --location "${URL}/${SYSEXT}.conf" \
     | sudo tee "/etc/sysupdate.${SYSEXT}.d/${SYSEXT}.conf"
   sudo /usr/lib/systemd/systemd-sysupdate update --component "${SYSEXT}"

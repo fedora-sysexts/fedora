@@ -1,0 +1,6 @@
+name := "qutebrowser"
+packages := "qutebrowser"
+
+import '../sysext.just'
+
+all: default

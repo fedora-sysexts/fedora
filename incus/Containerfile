@@ -1,0 +1,9 @@
+FROM baseimage
+
+RUN <<EORUN
+set -xeuo pipefail
+dnf install -y \
+    incus \
+    incus-client
+dnf clean all
+EORUN

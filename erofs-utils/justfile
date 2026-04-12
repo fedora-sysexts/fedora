@@ -1,5 +1,9 @@
 name := "erofs-utils"
-packages := "erofs-utils"
+# libdeflate: Added for Fedora CoreOS support
+packages := "
+erofs-utils
+libdeflate
+"
 
 import '../sysext.just'
 

@@ -1,0 +1,7 @@
+name := "powertop"
+packages := "powertop"
+upholds := "powertop.service"
+
+import '../sysext.just'
+
+all: default

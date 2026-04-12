@@ -12,9 +12,10 @@ See the [Virtual Machine Manager Flatpak](https://flathub.org/apps/org.virt_mana
 ## How to use
 
 - Install the sysext
-- Create the `qemu` user:
+- Create the `qemu` user and `libvirt` group:
   ```
   $ sudo systemd-sysusers /usr/lib/sysusers.d/libvirt-qemu.conf
+  $ sudo systemd-sysusers /usr/lib/sysusers.d/libvirt.conf
   ```
 - Copy the some default config:
   ```
@@ -34,9 +35,30 @@ See the [Virtual Machine Manager Flatpak](https://flathub.org/apps/org.virt_mana
       }
   });
   ```
+- Set the correct permissions and SELinux contexts:
+```
+sudo chown -R qemu:qemu /var/lib/libvirt/qemu
+sudo restorecon -Rv /var/lib/libvirt
+sudo chown root:root /var/log/libvirt/qemu
+sudo restorecon -Rv /var/log/libvirt
+```
+- Trigger the systemd tmpfile drop-in and refresh the linker cache:
+```
+  $ sudo systemd-tmpfiles --create
+  $ ldconfig
+```
+
 - Restart libvirtd (via virtqemud, virtnetworkd & virtstoraged):
   ```
   $ sudo systemctl restart virtqemud.socket virtnetworkd.socket virtstoraged.socket
+  ```
+
+  - (Optional) To allow cockpit to manage VMs via the cockpit flatpak you need to restart the dbus service:
+  ```
+  $ sudo systemctl reload dbus
+  $ sudo systemctl restart libvirt-dbus.service
+  $ sudo systemctl restart virtnodedevd.socket
+  $ sudo systemctl restart virtstoraged.socket
   ```
 
 ## Compatibility

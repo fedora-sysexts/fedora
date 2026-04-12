@@ -32,14 +32,6 @@ aux_links:
 last_edit_timestamp: true
 last_edit_time_format: "%b %e %Y at %I:%M %p"
 
-# Footer "Edit this page on GitHub" link text
-gh_edit_link: true
-gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/fedora-sysexts/fedora"
-gh_edit_branch: "main"
-gh_edit_source: "docs"
-gh_edit_view_mode: "tree"
-
 compress_html:
   clippings: all
   comments: all
