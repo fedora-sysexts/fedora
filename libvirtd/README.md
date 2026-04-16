@@ -60,6 +60,19 @@ sudo restorecon -Rv /var/log/libvirt
   $ sudo systemctl restart virtnodedevd.socket
   $ sudo systemctl restart virtstoraged.socket
   ```
+## Autostart VMs
+
+If you have VMs that need to start on boot, you need to have `virtqemud.service` started.
+This sysext only start the sockets, which will trigger the services only when needed, e.g.
+when issueing a `virsh` command.
+
+To add a upholds on `virtqemud`:
+```
+cat <<EOF > /etc/systemd/system/multi-user.target.d/20-qemu-enable-service.conf
+[Unit]
+Upholds=virtqemud.service 
+EOF
+```
 
 ## Compatibility
 
