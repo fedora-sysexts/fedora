@@ -1,0 +1,7 @@
+name := "et"
+packages := "et"
+upholds := "et.service"
+
+import '../sysext.just'
+
+all: default
