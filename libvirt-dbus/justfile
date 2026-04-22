@@ -1,0 +1,15 @@
+name := "libvirt-dbus"
+files := "usr"
+upholds := "
+libvirt-dbus.service
+"
+
+import '../sysext.just'
+
+all: default
+
+# Config-only sysext: use a date-based version
+version:
+    #!/bin/bash
+    set -euo pipefail
+    echo "$(date +%Y%m%d)" > ./version

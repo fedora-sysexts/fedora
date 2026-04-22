@@ -14,7 +14,6 @@ libvirt-daemon-driver-nwfilter
 libvirt-daemon-driver-qemu
 libvirt-daemon-driver-secret
 libvirt-daemon-driver-storage-core
-libvirt-dbus
 osinfo-db
 osinfo-db-tools
 netcat
@@ -26,7 +25,6 @@ virt-install
 "
 files := "usr"
 upholds := "
-libvirt-dbus.service
 virtlockd-admin.socket
 virtlockd.socket
 virtlogd-admin.socket

@@ -26,12 +26,10 @@ path = [
   "qemu-guest-agent/usr/lib/systemd/system/qemu-guest-agent.service.d/override.conf",
   "libvirtd/usr/lib/tmpfiles.d/ld.so.conf",
   "libvirtd-desktop/usr/lib/tmpfiles.d/ld.so.conf",
-  "libvirtd/usr/lib/sysusers.d/libvirtdbus-group.conf",
-  "libvirtd-desktop/usr/lib/sysusers.d/libvirtdbus-group.conf",
   "libvirtd/usr/lib/systemd/system/virtstoraged.service.d/after-ldreload.conf",
   "libvirtd-desktop/usr/lib/systemd/system/virtstoraged.service.d/after-ldreload.conf",
-  "libvirtd/usr/lib/systemd/system/libvirt-dbus.service.d/reload-dbus.conf",
-  "libvirtd-desktop/usr/lib/systemd/system/libvirt-dbus.service.d/reload-dbus.conf"
+  "libvirt-dbus/usr/lib/sysusers.d/libvirtdbus-group.conf",
+  "libvirt-dbus/usr/lib/systemd/system/libvirt-dbus.service.d/reload-dbus.conf"
 ]
 SPDX-FileCopyrightText = [
     "Fedora sysexts contributors"

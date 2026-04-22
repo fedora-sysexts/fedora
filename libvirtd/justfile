@@ -20,7 +20,6 @@ libvirt-daemon-driver-storage-logical
 libvirt-daemon-driver-storage-mpath
 libvirt-daemon-driver-storage-rbd
 libvirt-daemon-driver-storage-scsi
-libvirt-dbus
 netcat
 python3-virt-firmware
 qemu-img
@@ -30,7 +29,6 @@ virt-install
 "
 files := "usr"
 upholds := "
-libvirt-dbus.service
 virtlockd-admin.socket
 virtlockd.socket
 virtlogd-admin.socket

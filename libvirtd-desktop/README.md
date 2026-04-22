@@ -44,13 +44,8 @@ See the [Virtual Machine Manager Flatpak](https://flathub.org/apps/org.virt_mana
   ```
   $ sudo systemctl restart virtqemud.socket virtnetworkd.socket virtstoraged.socket
   ```
-    - (Optional) To allow cockpit to manage VMs via the cockpit flatpak you need to restart the dbus service:
-  ```
-  $ sudo systemctl reload dbus
-  $ sudo systemctl restart libvirt-dbus.service
-  $ sudo systemctl restart virtnodedevd.socket
-  $ sudo systemctl restart virtstoraged.socket
-  ```
+    - (Optional) To allow cockpit to manage VMs, install the
+      [`libvirt-dbus` sysext](https://travier.github.io/fedora-sysexts/libvirt-dbus/).
 
 ## Compatibility
 

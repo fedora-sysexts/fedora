@@ -24,7 +24,6 @@ dnf install -y \
     libvirt-daemon-driver-storage-mpath \
     libvirt-daemon-driver-storage-rbd \
     libvirt-daemon-driver-storage-scsi \
-    libvirt-dbus \
     netcat \
     qemu-img \
     qemu-kvm \
