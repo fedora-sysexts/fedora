@@ -1,0 +1,19 @@
+name := "libvirt-dbus"
+files := "usr"
+upholds := "
+libvirt-dbus.service
+"
+base_images := "
+quay.io/fedora/fedora-coreos:stable x86_64,aarch64
+quay.io/fedora/fedora-coreos:next x86_64,aarch64
+"
+
+import '../sysext.just'
+
+all: default
+
+# Config-only sysext: use a hardcoded version
+version:
+    #!/bin/bash
+    set -euo pipefail
+    echo "0.1.0" > ./version

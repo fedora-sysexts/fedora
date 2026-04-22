@@ -30,7 +30,6 @@ virt-install
 "
 files := "usr"
 upholds := "
-libvirt-dbus.service
 virtlockd-admin.socket
 virtlockd.socket
 virtlogd-admin.socket
