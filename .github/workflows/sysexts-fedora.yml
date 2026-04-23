@@ -314,6 +314,18 @@ jobs:
           sysext: 'strace'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: syncthing-tools"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'syncthing-tools'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: syncthing"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'syncthing'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: tmux"
         uses: ./.github/actions/build
         with:
@@ -623,6 +635,18 @@ jobs:
           sysext: 'strace'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: syncthing-tools"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'syncthing-tools'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: syncthing"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'syncthing'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: tmux"
         uses: ./.github/actions/build
         with:
@@ -918,6 +942,18 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'strace'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: syncthing-tools"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'syncthing-tools'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: syncthing"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'syncthing'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: tmux"
@@ -1619,6 +1655,18 @@ jobs:
           sysext: 'strace'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: syncthing-tools"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'syncthing-tools'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: syncthing"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'syncthing'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: tmux"
         uses: ./.github/actions/build
         with:
@@ -1928,6 +1976,18 @@ jobs:
           sysext: 'strace'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: syncthing-tools"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'syncthing-tools'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: syncthing"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'syncthing'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: tmux"
         uses: ./.github/actions/build
         with:
@@ -2223,6 +2283,18 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'strace'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: syncthing-tools"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'syncthing-tools'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: syncthing"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'syncthing'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: tmux"
