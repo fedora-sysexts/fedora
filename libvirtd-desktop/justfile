@@ -43,6 +43,7 @@ virtstoraged-ro.socket
 virtstoraged.socket
 "
 version_package := "libvirt-client"
+files := "usr"
 
 import '../sysext.just'
 
