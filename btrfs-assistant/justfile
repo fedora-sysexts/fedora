@@ -1,0 +1,12 @@
+name := "btrfs-assistant"
+packages := "btrfs-assistant"
+# Build on Silverblue as the base image does not include Qt6
+base_images := "
+quay.io/fedora-ostree-desktops/silverblue:42 x86_64,aarch64
+quay.io/fedora-ostree-desktops/silverblue:43 x86_64,aarch64
+quay.io/fedora-ostree-desktops/silverblue:44 x86_64,aarch64
+"
+
+import '../sysext.just'
+
+all: default
