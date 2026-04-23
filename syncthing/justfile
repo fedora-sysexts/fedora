@@ -1,0 +1,6 @@
+name := "syncthing"
+packages := "syncthing"
+
+import '../sysext.just'
+
+all: default
