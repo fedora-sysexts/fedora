@@ -314,6 +314,12 @@ jobs:
           sysext: 'strace'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: subscription-manager"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'subscription-manager'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: syncthing-tools"
         uses: ./.github/actions/build
         with:
@@ -635,6 +641,12 @@ jobs:
           sysext: 'strace'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: subscription-manager"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'subscription-manager'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: syncthing-tools"
         uses: ./.github/actions/build
         with:
@@ -942,6 +954,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'strace'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: subscription-manager"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'subscription-manager'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: syncthing-tools"
@@ -1673,6 +1691,12 @@ jobs:
           sysext: 'strace'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: subscription-manager"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'subscription-manager'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: syncthing-tools"
         uses: ./.github/actions/build
         with:
@@ -1994,6 +2018,12 @@ jobs:
           sysext: 'strace'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: subscription-manager"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'subscription-manager'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: syncthing-tools"
         uses: ./.github/actions/build
         with:
@@ -2301,6 +2331,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'strace'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: subscription-manager"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'subscription-manager'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: syncthing-tools"

@@ -1,0 +1,6 @@
+name := "subscription-manager"
+packages := "subscription-manager"
+
+import '../sysext.just'
+
+all: default
