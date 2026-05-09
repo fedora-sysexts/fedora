@@ -578,7 +578,7 @@ move-etc:
 # common cases:
 # - Cleanup files as requested in the justfile
 # - Remove all empty directories in /var, /run and /opt
-# - Try to merge the content of /usr/sbin with /usr/bin for Fedora 42 and later
+# - Merge the content of /usr/sbin with /usr/bin (since Fedora 42)
 # - Run the checks
 validate:
     #!/bin/bash
@@ -627,17 +627,17 @@ validate:
         ${SUDO} rmdir lib64
     fi
 
-    # Try to merge /usr/sbin with /usr/bin for Fedora 42+
-    if [[ "${version_id}" -ge 42 ]] && [[ -d "usr/sbin" ]]; then
+    # Try to merge /usr/sbin with /usr/bin (since Fedora 42)
+    if [[ -d "usr/sbin" ]]; then
         echo "➡️ Moving /usr/sbin to /usr/bin"
         ${SUDO} mv --verbose --no-clobber ./usr/sbin/* ./usr/bin
         ${SUDO} rmdir usr/sbin
     fi
 
-    # Check sbin/bin merge starting with Fedora 42
-    if [[ "${version_id}" -ge 42 ]] && [[ -d "usr/sbin" ]]; then
+    # Check bin/sbin merge (since Fedora 42)
+    if [[ -d "usr/sbin" ]]; then
         failed_checks=$((failed_checks+1))
-        echo "❌ Found /usr/sbin directory on Fedora 42+ sysext (see bin/sbin merge change)"
+        echo "❌ Found /usr/sbin directory (see bin/sbin merge change)"
         ls -alh usr/sbin
     fi
 
