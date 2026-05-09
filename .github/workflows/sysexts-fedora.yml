@@ -503,6 +503,12 @@ jobs:
           sysext: 'htop'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: igt-gpu-tools"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'igt-gpu-tools'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: incus"
         uses: ./.github/actions/build
         with:
@@ -1485,6 +1491,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'htop'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: igt-gpu-tools"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'igt-gpu-tools'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: incus"
