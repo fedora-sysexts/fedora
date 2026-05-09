@@ -10,7 +10,6 @@ set allow-duplicate-recipes := true
 # Default to base-atomic images for x86_64 & aarch64 for the current branched,
 # stable and old stable Fedora releases. Can be override on a per sysext basis.
 base_images := "
-quay.io/fedora-ostree-desktops/base-atomic:42 x86_64,aarch64
 quay.io/fedora-ostree-desktops/base-atomic:43 x86_64,aarch64
 quay.io/fedora-ostree-desktops/base-atomic:44 x86_64,aarch64
 "
