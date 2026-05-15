@@ -902,6 +902,12 @@ jobs:
           sysext: 'kubernetes-cri-o-1.35'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: kubernetes-cri-o-1.36"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'kubernetes-cri-o-1.36'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: libvirtd"
         uses: ./.github/actions/build
         with:
@@ -1011,6 +1017,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'kubernetes-cri-o-1.35'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: kubernetes-cri-o-1.36"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'kubernetes-cri-o-1.36'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libvirtd"
@@ -1904,6 +1916,12 @@ jobs:
           sysext: 'kubernetes-cri-o-1.35'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: kubernetes-cri-o-1.36"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'kubernetes-cri-o-1.36'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: libvirtd"
         uses: ./.github/actions/build
         with:
@@ -2013,6 +2031,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'kubernetes-cri-o-1.35'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: kubernetes-cri-o-1.36"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'kubernetes-cri-o-1.36'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libvirtd"
