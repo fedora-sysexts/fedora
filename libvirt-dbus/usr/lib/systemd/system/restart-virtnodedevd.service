@@ -1,0 +1,13 @@
+[Unit]
+Description=Restart virtnodedevd.socket after sysext merge
+# After sysext merge, virtnodedevd.socket detects configuration changes
+# afer being started.
+# This oneshot restarts the socket to fix it.
+After=systemd-sysext.service
+ConditionPathExists=/run/extensions
+
+[Service]
+Type=oneshot
+# So that the `upholds` don't restart it in a loop.
+RemainAfterExit=yes
+ExecStart=/usr/bin/systemctl restart virtnodedevd.socket

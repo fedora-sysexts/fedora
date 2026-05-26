@@ -29,7 +29,8 @@ path = [
   "libvirtd/usr/lib/systemd/system/virtstoraged.service.d/after-ldreload.conf",
   "libvirtd-desktop/usr/lib/systemd/system/virtstoraged.service.d/after-ldreload.conf",
   "libvirt-dbus/usr/lib/sysusers.d/libvirtdbus-group.conf",
-  "libvirt-dbus/usr/lib/systemd/system/libvirt-dbus.service.d/reload-dbus.conf"
+  "libvirt-dbus/usr/lib/systemd/system/libvirt-dbus.service.d/reload-dbus.conf",
+  "libvirt-dbus/usr/lib/systemd/system/restart-virtnodedevd.service"
 ]
 SPDX-FileCopyrightText = [
     "Fedora sysexts contributors"
