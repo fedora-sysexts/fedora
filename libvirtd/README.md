@@ -71,6 +71,8 @@ To add a upholds on `virtqemud`:
 cat <<EOF > /etc/systemd/system/multi-user.target.d/20-qemu-enable-service.conf
 [Unit]
 Upholds=virtqemud.service 
+Upholds=virtlogd.service
+Upholds=virtnetworkd.service
 EOF
 ```
 
