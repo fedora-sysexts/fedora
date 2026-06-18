@@ -188,6 +188,12 @@ jobs:
           sysext: 'igt-gpu-tools'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: incus-agent"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'incus-agent'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: incus"
         uses: ./.github/actions/build
         with:
@@ -507,6 +513,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'igt-gpu-tools'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: incus-agent"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'incus-agent'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: incus"
@@ -1202,6 +1214,12 @@ jobs:
           sysext: 'igt-gpu-tools'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: incus-agent"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'incus-agent'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: incus"
         uses: ./.github/actions/build
         with:
@@ -1521,6 +1539,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'igt-gpu-tools'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: incus-agent"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'incus-agent'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: incus"
