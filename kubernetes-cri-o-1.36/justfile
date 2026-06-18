@@ -25,9 +25,6 @@ quay.io/fedora/fedora-coreos:stable x86_64,aarch64
 quay.io/fedora/fedora-coreos:next x86_64,aarch64
 "
 
-# Until cri-o1.36 lands in F44 stable repos
-enable_repos := "updates-testing"
-
 import '../sysext.just'
 
 all: default
