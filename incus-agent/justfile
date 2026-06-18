@@ -1,0 +1,11 @@
+name := "incus-agent"
+packages := "
+incus-agent
+"
+# Disable recommends / weak dependencies to only include the agent and not the
+# packags that are used to provide the agent binaries from the host.
+dnf_weak_deps := "false"
+
+import '../sysext.just'
+
+all: default
