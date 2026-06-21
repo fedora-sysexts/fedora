@@ -1,0 +1,6 @@
+name := "qimgv"
+packages := "qimgv"
+
+import '../sysext.just'
+
+all: default
