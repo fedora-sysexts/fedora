@@ -1,0 +1,6 @@
+name := "vis"
+packages := "vis"
+
+import '../sysext.just'
+
+all: default
