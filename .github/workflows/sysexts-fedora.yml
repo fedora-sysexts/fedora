@@ -356,6 +356,12 @@ jobs:
           sysext: 'vim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: vis"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'vis'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: zoxide"
         uses: ./.github/actions/build
         with:
@@ -681,6 +687,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'vim'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: vis"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'vis'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: zoxide"
@@ -1382,6 +1394,12 @@ jobs:
           sysext: 'vim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: vis"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'vis'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: zoxide"
         uses: ./.github/actions/build
         with:
@@ -1707,6 +1725,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'vim'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: vis"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'vis'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: zoxide"
