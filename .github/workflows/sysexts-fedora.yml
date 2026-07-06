@@ -485,6 +485,12 @@ jobs:
           sysext: 'gh'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: git-absorb"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'git-absorb'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: git-delta"
         uses: ./.github/actions/build
         with:
@@ -1521,6 +1527,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'gh'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: git-absorb"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'git-absorb'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: git-delta"
