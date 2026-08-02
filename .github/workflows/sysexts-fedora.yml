@@ -623,6 +623,12 @@ jobs:
           sysext: 'neovim'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: noctalia"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'noctalia'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: powertop"
         uses: ./.github/actions/build
         with:
@@ -1665,6 +1671,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'neovim'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: noctalia"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'noctalia'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: powertop"
