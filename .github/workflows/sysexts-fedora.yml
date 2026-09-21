@@ -1001,12 +1001,6 @@ jobs:
           sysext: 'gdb'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: google-guest-agent"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'google-guest-agent'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: kubernetes-1.33"
         uses: ./.github/actions/build
         with:
@@ -2043,12 +2037,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'gdb'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: google-guest-agent"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'google-guest-agent'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: kubernetes-1.33"

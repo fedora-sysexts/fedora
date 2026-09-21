@@ -9,8 +9,9 @@ google-guest-agent.service
 "
 base_images := "
 quay.io/fedora/fedora-coreos:stable x86_64,aarch64
-quay.io/fedora/fedora-coreos:next x86_64,aarch64
 "
+# TODO: Pulls the full SELinux policy on Fedora 45
+# quay.io/fedora/fedora-coreos:next x86_64,aarch64
 
 import '../sysext.just'
 
