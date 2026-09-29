@@ -26,3 +26,5 @@ install-manual:
 
     # Not needed in Fedora 43 anymore
     ${SUDO} rm -f ./var/lib/unbound/root.key
+    # F45+: Created by a tmpfiles.d config
+    ${SUDO} rm -f ./var/lib/dnf/system-repo.lock
