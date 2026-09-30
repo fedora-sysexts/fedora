@@ -4,6 +4,7 @@ packages := "btrfs-assistant"
 base_images := "
 quay.io/fedora-ostree-desktops/silverblue:43 x86_64,aarch64
 quay.io/fedora-ostree-desktops/silverblue:44 x86_64,aarch64
+quay.io/fedora-ostree-desktops/silverblue:45 x86_64,aarch64
 "
 
 import '../sysext.just'
