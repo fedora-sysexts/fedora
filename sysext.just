@@ -577,6 +577,7 @@ move-etc:
 # Validation pass that checks for common errors and will also try to fix some
 # common cases:
 # - Cleanup files as requested in the justfile
+# - Remove dnf repo lock (/var/lib/dnf/system-repo.lock)
 # - Remove all empty directories in /var, /run and /opt
 # - Merge the content of /usr/sbin with /usr/bin (since Fedora 42)
 # - Run the checks
@@ -607,6 +608,12 @@ validate:
             echo "🧹 Cleaning up file: ${f}"
             rm ./${f}
         done
+    fi
+
+    # Remove dnf repo lock as it's created by a tmpfiles.d config (since Fedora 45)
+    if [[ -f "var/lib/dnf/system-repo.lock" ]]; then
+        echo "➡️ Removing dnf repo lock file"
+        ${SUDO} rm var/lib/dnf/system-repo.lock
     fi
 
     # Remove all empty directories in /var, /run and /opt
