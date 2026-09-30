@@ -29,30 +29,57 @@ main() {
 
     local -r releaseurl="https://github.com/\${{ github.repository }}/releases/download"
 
+    local -r registry="quay.io/fedora-ostree-desktops"
+
     arches=(
         'x86_64'
         'aarch64'
     )
 
-    images=(
-        'quay.io/fedora-ostree-desktops/base-atomic:43'
-        'quay.io/fedora-ostree-desktops/base-atomic:44'
-        'quay.io/fedora-ostree-desktops/silverblue:43'
-        'quay.io/fedora-ostree-desktops/silverblue:44'
-        'quay.io/fedora-ostree-desktops/kinoite:43'
-        'quay.io/fedora-ostree-desktops/kinoite:44'
+    variants=(
+        'base-atomic'
+        'silverblue'
+        'kinoite'
+    )
+
+    releases=(
+        '43'
+        '44'
+        '45'
+    )
+
+    # Generate image list
+    declare -a images
+    for variant in "${variants[@]}"; do
+        for release in "${releases[@]}"; do
+            images+=("${registry}/${variant}:${release}")
+        done
+    done
+    # Manually add Fedora CoreOS
+    images+=(
         'quay.io/fedora/fedora-coreos:stable'
         'quay.io/fedora/fedora-coreos:next'
     )
+    echo "Generating workflow for images:"
+    for image in "${images[@]}"; do
+        echo "- ${image}"
+    done
 
-    # Set jobnames
+    # Generate jobname list
     declare -A jobnames
-    jobnames["quay.io/fedora-ostree-desktops/base-atomic:43"]="fedora-43"
-    jobnames["quay.io/fedora-ostree-desktops/base-atomic:44"]="fedora-44"
-    jobnames["quay.io/fedora-ostree-desktops/silverblue:43"]="fedora-silverblue-43"
-    jobnames["quay.io/fedora-ostree-desktops/silverblue:44"]="fedora-silverblue-44"
-    jobnames["quay.io/fedora-ostree-desktops/kinoite:43"]="fedora-kinoite-43"
-    jobnames["quay.io/fedora-ostree-desktops/kinoite:44"]="fedora-kinoite-44"
+    for variant in "${variants[@]}"; do
+        for release in "${releases[@]}"; do
+            case "${variant}" in
+            "base-atomic")
+                jobnames["${registry}/${variant}:${release}"]="fedora-${release}"
+                ;;
+            *)
+                jobnames["${registry}/${variant}:${release}"]="fedora-${variant}-${release}"
+                ;;
+            esac
+        done
+    done
+    # Manually add Fedora CoreOS
     jobnames["quay.io/fedora/fedora-coreos:stable"]="fedora-coreos-stable"
     jobnames["quay.io/fedora/fedora-coreos:next"]="fedora-coreos-next"
 

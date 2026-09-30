@@ -9,14 +9,20 @@
       - build-fedora-43-aarch64
       - build-fedora-44-x86_64
       - build-fedora-44-aarch64
+      - build-fedora-45-x86_64
+      - build-fedora-45-aarch64
       - build-fedora-silverblue-43-x86_64
       - build-fedora-silverblue-43-aarch64
       - build-fedora-silverblue-44-x86_64
       - build-fedora-silverblue-44-aarch64
+      - build-fedora-silverblue-45-x86_64
+      - build-fedora-silverblue-45-aarch64
       - build-fedora-kinoite-43-x86_64
       - build-fedora-kinoite-43-aarch64
       - build-fedora-kinoite-44-x86_64
       - build-fedora-kinoite-44-aarch64
+      - build-fedora-kinoite-45-x86_64
+      - build-fedora-kinoite-45-aarch64
       - build-fedora-coreos-stable-x86_64
       - build-fedora-coreos-stable-aarch64
       - build-fedora-coreos-next-x86_64
