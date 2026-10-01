@@ -260,6 +260,9 @@ download-rpms target arch=arch:
     # Always disable the openh264 repo by default
     pre_commands="dnf5 config-manager setopt fedora-cisco-openh264.enabled=0; "
 
+    # Also disable the update-testing repo for branched releases
+    pre_commands+="dnf5 config-manager setopt updates-testing.enabled=0; "
+
     # Always lock to package versions that are already in the image
     pre_commands+="dnf5 versionlock add '*' > /dev/null; "
 
