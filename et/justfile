@@ -1,0 +1,6 @@
+name := "et"
+packages := "et"
+
+import '../sysext.just'
+
+all: default

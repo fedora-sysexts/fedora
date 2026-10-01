@@ -104,6 +104,12 @@ jobs:
           sysext: 'erofs-utils'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: et"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'et'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: fastfetch"
         uses: ./.github/actions/build
         with:
@@ -441,6 +447,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'erofs-utils'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: et"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'et'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: fastfetch"
@@ -1148,6 +1160,12 @@ jobs:
           sysext: 'erofs-utils'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: et"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'et'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: fastfetch"
         uses: ./.github/actions/build
         with:
@@ -1485,6 +1503,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'erofs-utils'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: et"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'et'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: fastfetch"
