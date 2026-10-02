@@ -39,6 +39,9 @@ disable_repos := ""
 # Do not enable any external repos by default
 external_repos := ""
 
+# Lock all package versions from the image by default
+version_lock := ""
+
 # Do not run any commands before downloading RPMs by default
 pre_commands := ""
 
@@ -257,26 +260,39 @@ download-rpms target arch=arch:
 
     packages="$(echo "{{packages}}" | xargs)"
 
+    # Start fresh
+    pre_commands=""
+
+    # Ensure dnf5-plugins (for 'config-manager' & 'copr' commands) is installed
+    pre_commands+="(rpm -q dnf5-plugins || dnf install -y dnf5-plugins) && "
+
     # Always disable the openh264 repo by default
-    pre_commands="dnf5 config-manager setopt fedora-cisco-openh264.enabled=0; "
+    pre_commands+="dnf config-manager setopt fedora-cisco-openh264.enabled=0 && "
+
+    # Also disable the update-testing repo for branched releases
+    pre_commands+="dnf config-manager setopt updates-testing.enabled=0 && "
+
+    # If requested, lock packages to the version already in the image
+    if [[ -n "{{version_lock}}"  && "{{version_lock}}" == "false" ]]; then
+        echo "🔓 Not locking package versions"
+    else
+        echo "🔒 Locking package versions"
+        pre_commands+="dnf versionlock add '*' > /dev/null && "
+    fi
 
     if [[ -n "{{pre_commands}}" ]]; then
-        pre_commands+="{{pre_commands}} ; "
+        pre_commands+="{{pre_commands}} && "
     fi
     if [[ -n "{{copr_repos}}" ]]; then
-        pre_commands+="dnf install -y dnf5-plugins"
         for r in "{{copr_repos}}"; do
-            pre_commands+=" ; dnf copr enable -y ${r}"
+            pre_commands+="dnf copr enable -y ${r} && "
         done
-        pre_commands+=" ; "
     fi
     if [[ -n "{{external_repos}}" ]]; then
-        pre_commands+="dnf install -y dnf5-plugins"
         external_repos="$(echo "{{external_repos}}" | xargs)"
         for r in ${external_repos}; do
-            pre_commands+=" ; dnf config-manager addrepo --from-repofile=${r}"
+            pre_commands+="dnf config-manager addrepo --from-repofile=${r} && "
         done
-        pre_commands+=" ; "
     fi
 
     if [[ -n "{{rpm_fusion_repos}}" ]]; then
@@ -288,7 +304,7 @@ download-rpms target arch=arch:
                 exit 1
             fi
             echo "➕ Enabling RPM Fusion repo: '${r}'"
-            pre_commands+=" dnf install -y https://mirrors.rpmfusion.org/${r}/fedora/rpmfusion-${r}-release-${release}.noarch.rpm ;"
+            pre_commands+="dnf install -y https://mirrors.rpmfusion.org/${r}/fedora/rpmfusion-${r}-release-${release}.noarch.rpm && "
         done
     fi
 
@@ -695,12 +711,20 @@ reset-selinux-labels target arch=arch:
         SUDO="sudo"
     fi
 
+    # Start fresh
+    pre_commands=""
+
     # Only install the packages in the container if we have an SELinux policy
     # module in the sysext and might thus need specific labels
-    pre_commands=""
     if [[ -d "./rootfs/usr/share/selinux/packages" ]]; then
+        # Ensure dnf5-plugins (for 'config-manager' command) is installed
+        pre_commands+="dnf install -y dnf5-plugins && "
+
         # Always disable the openh264 repo by default
-        pre_commands="dnf5 config-manager setopt fedora-cisco-openh264.enabled=0; "
+        pre_commands+="dnf config-manager setopt fedora-cisco-openh264.enabled=0 && "
+
+        # Also disable the update-testing repo for branched releases
+        pre_commands+="dnf config-manager setopt updates-testing.enabled=0 && "
 
         dnf_opts=""
         if [[ "{{dnf_weak_deps}}" == false ]]; then
@@ -715,7 +739,7 @@ reset-selinux-labels target arch=arch:
         fi
 
         if [[ -n "{{pre_commands}}" ]]; then
-            pre_commands+="{{pre_commands}} ; "
+            pre_commands+="{{pre_commands}} && "
         fi
 
         disablerepos=""

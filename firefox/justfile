@@ -3,6 +3,8 @@ packages := "
 firefox
 firefox-langpacks
 "
+# Disable version lock as we currently download a package that is already in the image
+version_lock := "false"
 
 import '../sysext.just'
 
