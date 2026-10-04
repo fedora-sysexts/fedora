@@ -1,0 +1,7 @@
+name := "gcc"
+packages := "gcc gcc-c++"
+
+import '../sysext.just'
+
+all: default
+
