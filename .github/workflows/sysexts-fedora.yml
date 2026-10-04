@@ -45,7 +45,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -390,7 +390,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -1080,7 +1080,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -1119,7 +1119,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -1197,7 +1197,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -1224,7 +1224,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -1278,7 +1278,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -1395,7 +1395,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -1506,7 +1506,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -1851,7 +1851,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -2541,7 +2541,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -2580,7 +2580,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -2658,7 +2658,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -2685,7 +2685,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -2739,7 +2739,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -2856,7 +2856,7 @@ jobs:
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Setup artifacts and dnf cache directories"
         run: |
@@ -2990,7 +2990,7 @@ jobs:
     if: ${{ always() && (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' }}
     steps:
       - name: "Checkout repo"
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: "Mark directory as safe"
         run: |
