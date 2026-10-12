@@ -263,13 +263,8 @@ download-rpms target arch=arch:
     # Start fresh
     pre_commands=""
 
-    # If requested, lock packages to the version already in the image
-    if [[ -n "{{version_lock}}"  && "{{version_lock}}" == "false" ]]; then
-        echo "🔓 Not locking package versions"
-    else
-        echo "🔒 Locking package versions"
-        pre_commands+="dnf --disablerepo '*' versionlock add '*' > /dev/null && "
-    fi
+    # Lock packages to the version already in the image
+    pre_commands+="dnf --disablerepo '*' versionlock add '*' > /dev/null && "
 
     # Ensure dnf5-plugins (for 'config-manager' & 'copr' commands) is installed
     pre_commands+="(rpm -q dnf5-plugins || dnf install -y dnf5-plugins) && "
@@ -280,21 +275,14 @@ download-rpms target arch=arch:
     # Also disable the update-testing repo for branched releases
     pre_commands+="dnf config-manager setopt updates-testing.enabled=0 && "
 
-    if [[ -n "{{pre_commands}}" ]]; then
-        pre_commands+="{{pre_commands}} && "
-    fi
+    # Setup COPR repos
     if [[ -n "{{copr_repos}}" ]]; then
         for r in "{{copr_repos}}"; do
             pre_commands+="dnf copr enable -y ${r} && "
         done
     fi
-    if [[ -n "{{external_repos}}" ]]; then
-        external_repos="$(echo "{{external_repos}}" | xargs)"
-        for r in ${external_repos}; do
-            pre_commands+="dnf config-manager addrepo --from-repofile=${r} && "
-        done
-    fi
 
+    # Setup RPM Fusion repos
     if [[ -n "{{rpm_fusion_repos}}" ]]; then
         release=$(podman run {{podman_opts}} "{{target}}" \
             bash -c 'rpm -E %fedora' | tr -d '\n')
@@ -306,6 +294,27 @@ download-rpms target arch=arch:
             echo "➕ Enabling RPM Fusion repo: '${r}'"
             pre_commands+="dnf install -y https://mirrors.rpmfusion.org/${r}/fedora/rpmfusion-${r}-release-${release}.noarch.rpm && "
         done
+    fi
+
+    # Setup other external repos
+    if [[ -n "{{external_repos}}" ]]; then
+        external_repos="$(echo "{{external_repos}}" | xargs)"
+        for r in ${external_repos}; do
+            pre_commands+="dnf config-manager addrepo --from-repofile=${r} && "
+        done
+    fi
+
+    # Finally, run user specified pre-commands
+    if [[ -n "{{pre_commands}}" ]]; then
+        pre_commands+="{{pre_commands}} && "
+    fi
+
+    # If requested, unlock packages from the version already in the image
+    if [[ -n "{{version_lock}}"  && "{{version_lock}}" == "false" ]]; then
+        echo "🔓 Not locking package versions"
+        pre_commands+="dnf --disablerepo '*' versionlock clear > /dev/null && "
+    else
+        echo "🔒 Locking package versions"
     fi
 
     mkdir -p ../.dnf-cache
