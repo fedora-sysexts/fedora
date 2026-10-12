@@ -264,10 +264,10 @@ download-rpms target arch=arch:
     pre_commands=""
 
     # Lock packages to the version already in the image
-    pre_commands+="dnf --disablerepo '*' versionlock add '*' > /dev/null && "
+    pre_commands+="dnf --disable-repo '*' versionlock add '*' > /dev/null && "
 
     # Ensure dnf5-plugins (for 'config-manager' & 'copr' commands) is installed
-    pre_commands+="(rpm -q dnf5-plugins || dnf install -y dnf5-plugins) && "
+    pre_commands+="(rpm -q dnf5-plugins || dnf --disable-repo 'updates-testing' install -y dnf5-plugins) && "
 
     # Always disable the openh264 repo by default
     pre_commands+="dnf config-manager setopt fedora-cisco-openh264.enabled=0 && "
