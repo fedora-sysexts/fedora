@@ -263,6 +263,14 @@ download-rpms target arch=arch:
     # Start fresh
     pre_commands=""
 
+    # If requested, lock packages to the version already in the image
+    if [[ -n "{{version_lock}}"  && "{{version_lock}}" == "false" ]]; then
+        echo "🔓 Not locking package versions"
+    else
+        echo "🔒 Locking package versions"
+        pre_commands+="dnf --disablerepo '*' versionlock add '*' > /dev/null && "
+    fi
+
     # Ensure dnf5-plugins (for 'config-manager' & 'copr' commands) is installed
     pre_commands+="(rpm -q dnf5-plugins || dnf install -y dnf5-plugins) && "
 
@@ -271,14 +279,6 @@ download-rpms target arch=arch:
 
     # Also disable the update-testing repo for branched releases
     pre_commands+="dnf config-manager setopt updates-testing.enabled=0 && "
-
-    # If requested, lock packages to the version already in the image
-    if [[ -n "{{version_lock}}"  && "{{version_lock}}" == "false" ]]; then
-        echo "🔓 Not locking package versions"
-    else
-        echo "🔒 Locking package versions"
-        pre_commands+="dnf --disablerepo '*' versionlock add '*' > /dev/null && "
-    fi
 
     if [[ -n "{{pre_commands}}" ]]; then
         pre_commands+="{{pre_commands}} && "
