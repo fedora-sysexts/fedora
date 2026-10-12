@@ -277,7 +277,7 @@ download-rpms target arch=arch:
         echo "🔓 Not locking package versions"
     else
         echo "🔒 Locking package versions"
-        pre_commands+="dnf versionlock add '*' > /dev/null && "
+        pre_commands+="dnf --disablerepo '*' versionlock add '*' > /dev/null && "
     fi
 
     if [[ -n "{{pre_commands}}" ]]; then
