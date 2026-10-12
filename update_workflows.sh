@@ -112,9 +112,9 @@ main() {
         "${tmpl}/00_sysexts_header"
 
     for arch in "${arches[@]}"; do
-        runson="ubuntu-24.04"
+        runson="ubuntu-26.04"
         if [[ "${arch}" == "aarch64" ]]; then
-            runson="ubuntu-24.04-arm"
+            runson="ubuntu-26.04-arm"
         fi
         for image in "${images[@]}"; do
             sed -e "s|%%JOBNAME%%|${jobnames["${image}"]}-${arch}|g" \
