@@ -26,7 +26,7 @@ install_sysext() {
   sudo install -d -m 0755 -o 0 -g 0 "/etc/sysupdate.${SYSEXT}.d"
   sudo restorecon -RFv "/etc/sysupdate.${SYSEXT}.d"
   curl --silent --fail --location "${URL}/${SYSEXT}.conf" \
-    | sudo tee "/etc/sysupdate.${SYSEXT}.d/${SYSEXT}.conf"
+    | sudo tee "/etc/sysupdate.${SYSEXT}.d/${SYSEXT}.transfer"
   sudo /usr/lib/systemd/systemd-sysupdate update --component "${SYSEXT}"
 }
 ```
@@ -81,7 +81,7 @@ uninstall_sysext() {
   SYSEXT="${1}"
   sudo rm -i "/var/lib/extensions/${SYSEXT}.raw"
   sudo rm -i "/var/lib/extensions.d/${SYSEXT}-"*".raw"
-  sudo rm -i "/etc/sysupdate.${SYSEXT}.d/${SYSEXT}.conf"
+  sudo rm -i "/etc/sysupdate.${SYSEXT}.d/${SYSEXT}.transfer" || sudo rm -i "/etc/sysupdate.${SYSEXT}.d/${SYSEXT}.conf"
   sudo rmdir "/etc/sysupdate.${SYSEXT}.d/"
 }
 ```
