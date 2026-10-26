@@ -1,5 +1,11 @@
 name := "helix"
 packages := "helix"
+# Do not pull compilers & X11 packages. Use the gcc sysext instead if needed.
+exclude_packages := "
+gcc-c++
+git-core
+xsel
+"
 
 import '../sysext.just'
 
