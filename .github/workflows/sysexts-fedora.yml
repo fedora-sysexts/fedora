@@ -272,6 +272,12 @@ jobs:
           sysext: 'libvirtd-desktop'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: minicom"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'minicom'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: moby-engine"
         uses: ./.github/actions/build
         with:
@@ -623,6 +629,12 @@ jobs:
           sysext: 'libvirtd-desktop'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: minicom"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'minicom'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: moby-engine"
         uses: ./.github/actions/build
         with:
@@ -972,6 +984,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'libvirtd-desktop'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: minicom"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'minicom'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: moby-engine"
@@ -1751,6 +1769,12 @@ jobs:
           sysext: 'libvirtd-desktop'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: minicom"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'minicom'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: moby-engine"
         uses: ./.github/actions/build
         with:
@@ -2102,6 +2126,12 @@ jobs:
           sysext: 'libvirtd-desktop'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: minicom"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'minicom'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: moby-engine"
         uses: ./.github/actions/build
         with:
@@ -2451,6 +2481,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'libvirtd-desktop'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: minicom"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'minicom'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: moby-engine"

@@ -1,0 +1,6 @@
+name := "minicom"
+packages := "minicom"
+
+import '../sysext.just'
+
+all: default
