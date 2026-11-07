@@ -1,5 +1,7 @@
 name := "gdb"
 packages := "gdb"
+# Temporary until libxml2 updates gets included in the image
+version_lock := "false"
 base_images := "
 quay.io/fedora/fedora-coreos:stable x86_64,aarch64
 quay.io/fedora/fedora-coreos:next x86_64,aarch64
