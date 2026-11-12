@@ -320,6 +320,12 @@ jobs:
           sysext: 'ripgrep'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: socat"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'socat'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: source-foundry-hack-fonts"
         uses: ./.github/actions/build
         with:
@@ -683,6 +689,12 @@ jobs:
           sysext: 'ripgrep'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: socat"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'socat'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: source-foundry-hack-fonts"
         uses: ./.github/actions/build
         with:
@@ -1032,6 +1044,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'ripgrep'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: socat"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'socat'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: source-foundry-hack-fonts"
@@ -1817,6 +1835,12 @@ jobs:
           sysext: 'ripgrep'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: socat"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'socat'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: source-foundry-hack-fonts"
         uses: ./.github/actions/build
         with:
@@ -2180,6 +2204,12 @@ jobs:
           sysext: 'ripgrep'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: socat"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'socat'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: source-foundry-hack-fonts"
         uses: ./.github/actions/build
         with:
@@ -2529,6 +2559,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'ripgrep'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: socat"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'socat'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: source-foundry-hack-fonts"

@@ -1,0 +1,6 @@
+name := "socat"
+packages := "socat"
+
+import '../sysext.just'
+
+all: default
