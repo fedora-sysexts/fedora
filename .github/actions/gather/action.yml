@@ -19,7 +19,7 @@ runs:
       run: |
         set -euxo pipefail
 
-        gh release list --limit 2000 --json tagName > releases.json
+        gh release list --limit 5000 --json tagName > releases.json
 
         for sysext in $(./.github/list_sysexts.sh); do
           rm -f ./SHA256SUMS* ./*.conf
