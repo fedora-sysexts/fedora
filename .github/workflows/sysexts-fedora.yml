@@ -1349,12 +1349,6 @@ jobs:
           sysext: 'WALinuxAgent'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: amazon-ec2-utils"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'amazon-ec2-utils'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: gdb"
         uses: ./.github/actions/build
         with:
@@ -2862,12 +2856,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'WALinuxAgent'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: amazon-ec2-utils"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'amazon-ec2-utils'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: gdb"
