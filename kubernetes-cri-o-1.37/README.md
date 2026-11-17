@@ -1,4 +1,4 @@
-# kubernetes-cri-o-1.33
+# kubernetes-cri-o-1.37
 
 Kubernetes and CRI-O packages in a single system extension.
 
