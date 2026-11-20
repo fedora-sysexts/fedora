@@ -140,12 +140,6 @@ jobs:
           sysext: 'foot'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: fuse2"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'fuse2'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: gcc"
         uses: ./.github/actions/build
         with:
@@ -501,12 +495,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'foot'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: fuse2"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'fuse2'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: gcc"
@@ -870,12 +858,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'foot'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: fuse2"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'fuse2'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: gcc"
@@ -1649,12 +1631,6 @@ jobs:
           sysext: 'foot'
           image: ${{ env.IMAGE }}
 
-      - name: "Build sysext: fuse2"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'fuse2'
-          image: ${{ env.IMAGE }}
-
       - name: "Build sysext: gcc"
         uses: ./.github/actions/build
         with:
@@ -2010,12 +1986,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'foot'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: fuse2"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'fuse2'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: gcc"
@@ -2379,12 +2349,6 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'foot'
-          image: ${{ env.IMAGE }}
-
-      - name: "Build sysext: fuse2"
-        uses: ./.github/actions/build
-        with:
-          sysext: 'fuse2'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: gcc"
